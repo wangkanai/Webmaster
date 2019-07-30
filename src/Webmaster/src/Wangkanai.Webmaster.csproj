@@ -11,5 +11,6 @@
   
   <ItemGroup>
     <ProjectReference Include="..\..\Webmaster.Core\src\Wangkanai.Webmaster.Core.csproj" />
+    <ProjectReference Include="..\..\Webmaster.TagHelpers\src\Wangkanai.Webmaster.TagHelpers.csproj" />
   </ItemGroup>
 </Project>
