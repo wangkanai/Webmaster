@@ -17,13 +17,13 @@ namespace Wangkanai.Webmaster.TagHelpers
         private const string HrefAttributeName = "href";
         private const string RelAttributeName = "rel";
 
-
         public CanonicalTagHelper() { }
 
         public override int Order => -1000;
 
+        [HtmlAttributeNotBound]
         [ViewContext]
-        protected ViewContext ViewContext { get; }
+        public ViewContext ViewContext { get; set; }
 
         public string Site { get; set; }
         public string Path { get; set; }
