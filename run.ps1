@@ -1,3 +1,4 @@
+./dotnet-install.ps1 -Channel LTS
 dotnet --version
 dotnet restore
 dotnet build
