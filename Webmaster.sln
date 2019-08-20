@@ -29,9 +29,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.MvcApp", "sample\Search.MvcApp\Search.MvcApp.csproj", "{90857AE4-7790-47EC-9F35-A0040239991B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Search.MvcApp", "sample\Search.MvcApp\Search.MvcApp.csproj", "{90857AE4-7790-47EC-9F35-A0040239991B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.RazorPagesApp", "sample\Search.RazorPagesApp\Search.RazorPagesApp.csproj", "{3BE398FE-3807-4E10-A23E-BF9DE645E7BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Search.RazorPagesApp", "sample\Search.RazorPagesApp\Search.RazorPagesApp.csproj", "{3BE398FE-3807-4E10-A23E-BF9DE645E7BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Webmaster.Routing", "Webmaster.Routing", "{079F7FF2-363A-40DF-9FAB-565DB64F5086}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wangkanai.Webmaster.Routing", "src\Webmaster.Routing\src\Wangkanai.Webmaster.Routing.csproj", "{D50DE8DC-5C5C-423E-BDAF-398FF4AA6657}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wangkanai.Webmaster.Routing.Tests", "src\Webmaster.Routing\test\Wangkanai.Webmaster.Routing.Tests.csproj", "{39733FE6-E668-419E-87A1-4B2B5C60D914}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +77,14 @@ Global
 		{3BE398FE-3807-4E10-A23E-BF9DE645E7BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BE398FE-3807-4E10-A23E-BF9DE645E7BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BE398FE-3807-4E10-A23E-BF9DE645E7BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D50DE8DC-5C5C-423E-BDAF-398FF4AA6657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D50DE8DC-5C5C-423E-BDAF-398FF4AA6657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D50DE8DC-5C5C-423E-BDAF-398FF4AA6657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D50DE8DC-5C5C-423E-BDAF-398FF4AA6657}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39733FE6-E668-419E-87A1-4B2B5C60D914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39733FE6-E668-419E-87A1-4B2B5C60D914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39733FE6-E668-419E-87A1-4B2B5C60D914}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39733FE6-E668-419E-87A1-4B2B5C60D914}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +98,8 @@ Global
 		{D3A2A60B-9C54-450F-9A53-82502D6C4407} = {1B0828B9-B942-458B-B0B9-467A81E60CE3}
 		{90857AE4-7790-47EC-9F35-A0040239991B} = {479D9FCD-D57B-48CC-9D19-23707BC4152A}
 		{3BE398FE-3807-4E10-A23E-BF9DE645E7BC} = {479D9FCD-D57B-48CC-9D19-23707BC4152A}
+		{D50DE8DC-5C5C-423E-BDAF-398FF4AA6657} = {079F7FF2-363A-40DF-9FAB-565DB64F5086}
+		{39733FE6-E668-419E-87A1-4B2B5C60D914} = {079F7FF2-363A-40DF-9FAB-565DB64F5086}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B675781-22E5-4F07-9CC9-D2CE0AD901F1}
