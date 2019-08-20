@@ -1,0 +1,17 @@
+image:
+  - Visual Studio 2017
+init:
+  - git config --global core.autocrlf true
+branches:
+  only:
+    - master
+    - dev
+    - /^release\/.$/
+    - /^(.*\/)?ci-.*$/
+build_script:
+  - ps: ./run.ps1
+clone_depth: 1
+test: 'off'
+deploy: 'off'
+artifacts:
+  - path: '**\*.nupkg'
