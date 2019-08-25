@@ -3,6 +3,22 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <Version>0.0.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>Sarin Na Wangkanai</Copyright>
+    <PackageProjectUrl>https://github.com/wangkanai/Webmaster</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/wangkanai/Webmaster.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseFile></PackageLicenseFile>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageIconUrl>http://0.gravatar.com/avatar/f58457d38ab3bc43526c6e52af17494e</PackageIconUrl>
+    <Authors>Sarin Na Wangkanai</Authors>
+
+    <LangVersion>8.0</LangVersion>
+    <NullableContextOptions>enable</NullableContextOptions>
+
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   
   <ItemGroup>
@@ -14,4 +30,10 @@
     <ProjectReference Include="..\..\Webmaster.Routing\src\Wangkanai.Webmaster.Routing.csproj" />
     <ProjectReference Include="..\..\Webmaster.TagHelpers\src\Wangkanai.Webmaster.TagHelpers.csproj" />
   </ItemGroup>
+
+  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+    </ItemGroup>
+  </Target>
 </Project>
