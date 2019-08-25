@@ -8,13 +8,11 @@ using System.Threading.Tasks;
 
 namespace Wangkanai.Webmaster.TagHelpers
 {
-    [HtmlTargetElement("img", Attributes = SrcAttributeName , TagStructure = TagStructure.WithoutEndTag)]
+    [HtmlTargetElement(ImgAttributeName, Attributes = SrcAttributeName , TagStructure = TagStructure.WithoutEndTag)]
     public class ImageInlineTagHelper :TagHelper
     {
         private const string ImgAttributeName = "img";
         private const string SrcAttributeName = "inline-src";
-
-        public ImageInlineTagHelper()     {        }
 
         public override int Order => -1000;
 
@@ -22,12 +20,24 @@ namespace Wangkanai.Webmaster.TagHelpers
         [ViewContext]
         public ViewContext ViewContext { get; set; }
 
+        [HtmlAttributeName(SrcAttributeName)]
+        public string Src { get; set; }
+
+        public ImageInlineTagHelper(TagHelperContext context) {
+            if (context == null)
+                throw new ArgumentNullException(nameof(context));
+
+            if (Src == null)
+                throw new InvalidOperationException(nameof(Src));
+        
+        }
+
         public override Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
             if (context == null)
                 throw new ArgumentNullException(nameof(context));
             if (output == null)
-                throw new ArgumentNullException(nameof(context));
+                throw new ArgumentNullException(nameof(output));
 
             output.TagName = "img";
 
