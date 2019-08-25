@@ -46,8 +46,6 @@ namespace Wangkanai.Webmaster.TagHelpers
             }
 
             output.Attributes.Add(HrefAttributeName, Site + Path);
-
-
         }
     }
 

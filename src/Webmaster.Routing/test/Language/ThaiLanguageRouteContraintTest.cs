@@ -10,7 +10,7 @@ using Xunit;
 
 namespace Wangkanai.Webmaster.Routing.Tests.Language
 {
-    public class ThaiLanguageRouteContraintTest : LanguageRouteContraintBaseTest
+    public class ThaiLanguageRouteContraintTest
     {
         [Theory]
         [InlineData("กรุงเทพ", true)]
