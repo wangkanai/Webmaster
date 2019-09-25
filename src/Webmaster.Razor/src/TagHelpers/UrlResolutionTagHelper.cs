@@ -24,7 +24,7 @@ namespace Wangkanai.Webmaster.Razor.TagHelpers
 
         [HtmlAttributeNotBound]
         [ViewContext]
-        public ViewContext  ViewContent { get; set; }
+        public ViewContext?  ViewContent { get; set; }
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {

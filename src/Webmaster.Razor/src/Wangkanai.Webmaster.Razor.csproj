@@ -4,6 +4,9 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <Version>0.0.2</Version>
     <IsAspNetCoreApp>true</IsAspNetCoreApp>
+
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
   
   <ItemGroup>
