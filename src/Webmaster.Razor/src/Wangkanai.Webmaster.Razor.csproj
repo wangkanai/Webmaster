@@ -3,17 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <Version>0.0.2</Version>
+    <IsAspNetCoreApp>true</IsAspNetCoreApp>
 
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
+  
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Webmaster.Core\src\Wangkanai.Webmaster.Core.csproj" />
-  </ItemGroup>
-  
 </Project>
