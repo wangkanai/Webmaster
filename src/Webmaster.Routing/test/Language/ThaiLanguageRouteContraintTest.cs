@@ -10,17 +10,17 @@ using Xunit;
 
 namespace Wangkanai.Webmaster.Routing.Tests.Language
 {
-    public class ThaiLanguageRouteContraintTest : LanguageRouteContraintBaseTest
+    public class ThaiLanguageRouteContraintTest
     {
         [Theory]
         [InlineData("กรุงเทพ", true)]
         [InlineData("Bangkok", false)]
         [InlineData("กรุงเทพ1", true)]      // want it to be false
         [InlineData("กรุงเทพabc", true)]    // want it to be false
-        [InlineData("Bangkokกทม", true)]  // want it to be false 
+        [InlineData("Bangkokกทม", true)]  // want it to be false
         public void ThaiRegexContraintFromInput(string routeValue, bool shouldMatch)
         {
-            // arrage            
+            // arrage
             var contraint = new ThaiLanguageRouteContraint();
             var values = new RouteValueDictionary(new { controller = routeValue });
 
