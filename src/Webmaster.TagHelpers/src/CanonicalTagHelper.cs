@@ -13,7 +13,7 @@ namespace Wangkanai.Webmaster.TagHelpers
     [HtmlTargetElement(CanonicalAttributeName)]
     public class CanonicalTagHelper : TagHelper
     {
-        private const string CanonicalAttributeName = "seo-canonical";        
+        private const string CanonicalAttributeName = "seo-canonical";
         private const string HrefAttributeName = "href";
         private const string RelAttributeName = "rel";
 
@@ -46,8 +46,6 @@ namespace Wangkanai.Webmaster.TagHelpers
             }
 
             output.Attributes.Add(HrefAttributeName, Site + Path);
-
-
         }
     }
 
