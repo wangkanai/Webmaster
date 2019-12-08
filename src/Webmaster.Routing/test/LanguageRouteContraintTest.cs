@@ -82,7 +82,7 @@ namespace Wangkanai.Webmaster.Routing.Tests
         }
 
         [Theory]
-        [InlineData("မြန်မာ", false)] // some wrong with Burmese
+        [InlineData("မြန်မာ", false)] // some wrong with Burmese 
         [InlineData("กรุงเทพ", false)]
         [InlineData("bangkok", false)]
         [InlineData("Bangkok1", false)]
