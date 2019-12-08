@@ -45,6 +45,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Webmaster.Razor", "Webmaste
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wangkanai.Webmaster.Razor", "src\Webmaster.Razor\src\Wangkanai.Webmaster.Razor.csproj", "{9824FD61-F8B9-4BE6-A21F-5F90B64C57CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doc", "doc\doc.csproj", "{91B131FB-84AD-4106-B34B-E7EC7E7140AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,10 @@ Global
 		{9824FD61-F8B9-4BE6-A21F-5F90B64C57CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9824FD61-F8B9-4BE6-A21F-5F90B64C57CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9824FD61-F8B9-4BE6-A21F-5F90B64C57CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91B131FB-84AD-4106-B34B-E7EC7E7140AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91B131FB-84AD-4106-B34B-E7EC7E7140AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91B131FB-84AD-4106-B34B-E7EC7E7140AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91B131FB-84AD-4106-B34B-E7EC7E7140AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
