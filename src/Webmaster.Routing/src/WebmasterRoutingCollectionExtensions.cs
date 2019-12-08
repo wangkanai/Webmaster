@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Wangkanai.Webmaster.Routing;
-using Wangkanai.Webmaster.Routing.Language;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -16,7 +15,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
             builder.Services.Configure<RouteOptions>(options =>
             {
-                options.ConstraintMap.Add("thai", typeof(ThaiLanguageRouteContraint));                
+                options.ConstraintMap.Add("thai", typeof(ThaiLanguageRouteContraint));
                 options.ConstraintMap.Add("lao", typeof(LaoLanguageRouteContraint));
                 options.ConstraintMap.Add("myanmar", typeof(MyanmarLanguageRouteContraint));
             });
