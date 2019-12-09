@@ -18,7 +18,7 @@ test: 'off'
 deploy:
 - provider: NuGet
   api_key:
-    secure: 3oIYTJaSzVop/lz7vk1/gaDEYPRHC7WP1EvVMPtBHv2olsZGlT2ulFZewD6IzIGP
+    secure: +WkQsLfLX+2884LCdTg6WbxK2mkPqOkEGncIDyTtG9DhIO/3HrCcAWSS98PWcLX7
   username:
     secure: qC0aKO6QJRsHw5L+Q7OYew==
   artifact: artifacts/
