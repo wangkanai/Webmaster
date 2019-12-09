@@ -21,7 +21,7 @@ deploy:
     secure: +WkQsLfLX+2884LCdTg6WbxK2mkPqOkEGncIDyTtG9DhIO/3HrCcAWSS98PWcLX7
   username:
     secure: qC0aKO6QJRsHw5L+Q7OYew==
-  artifact: artifacts/
+  artifact: src/
   on:
     branch: master
 artifacts:
