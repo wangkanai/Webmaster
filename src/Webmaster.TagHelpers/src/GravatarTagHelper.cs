@@ -103,9 +103,4 @@ namespace Wangkanai.Webmaster.TagHelpers
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         Default
     }
-
-    internal static class ModeExtension
-    {
-
-    }
 }
