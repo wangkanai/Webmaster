@@ -1,5 +1,7 @@
-﻿using System;
-using System.Runtime.Serialization;
+﻿// Copyright (c) 2014-2020 Sarin Na Wangkanai, All Rights Reserved.
+// The Apache v2. See License.txt in the project root for license information.
+
+using System;
 
 namespace Wangkanai.Webmaster.Routing
 {

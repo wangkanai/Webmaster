@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿// Copyright (c) 2014-2020 Sarin Na Wangkanai, All Rights Reserved.
+// The Apache v2. See License.txt in the project root for license information.
+
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Text.Encodings.Web;
 
 namespace Wangkanai.Webmaster.Razor.TagHelpers
@@ -24,7 +25,7 @@ namespace Wangkanai.Webmaster.Razor.TagHelpers
 
         [HtmlAttributeNotBound]
         [ViewContext]
-        public ViewContext?  ViewContent { get; set; }
+        public ViewContext? ViewContent { get; set; }
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {

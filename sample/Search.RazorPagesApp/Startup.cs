@@ -1,7 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+// Copyright (c) 2014-2020 Sarin Na Wangkanai, All Rights Reserved.
+// The Apache v2. See License.txt in the project root for license information.
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
