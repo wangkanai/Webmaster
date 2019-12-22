@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Html;
+﻿// Copyright (c) 2014-2020 Sarin Na Wangkanai, All Rights Reserved.
+// The Apache v2. See License.txt in the project root for license information.
+
+using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
@@ -6,9 +9,7 @@ using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Wangkanai.Webmaster.Razor.TagHelpers;
@@ -65,7 +66,6 @@ namespace Wangkanai.Webmaster.TagHelpers
                 return "image/svg+xml";
             throw new ArgumentException("Unknown file type");
         }
-
 
         private string ConvertToBase64(byte[] array) => Convert.ToBase64String(array);
 

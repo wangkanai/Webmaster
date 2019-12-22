@@ -1,12 +1,10 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+﻿// Copyright (c) 2014-2020 Sarin Na Wangkanai, All Rights Reserved.
+// The Apache v2. See License.txt in the project root for license information.
+
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Wangkanai.Webmaster.TagHelpers
 {
@@ -17,7 +15,9 @@ namespace Wangkanai.Webmaster.TagHelpers
         private const string HrefAttributeName = "href";
         private const string RelAttributeName = "rel";
 
-        public CanonicalTagHelper() { }
+        public CanonicalTagHelper()
+        {
+        }
 
         public override int Order => -1000;
 

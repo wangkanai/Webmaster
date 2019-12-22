@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Routing;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿// Copyright (c) 2014-2020 Sarin Na Wangkanai, All Rights Reserved.
+// The Apache v2. See License.txt in the project root for license information.
+
+using Microsoft.AspNetCore.Routing;
 using Wangkanai.Webmaster.Routing;
 
 namespace Microsoft.Extensions.DependencyInjection

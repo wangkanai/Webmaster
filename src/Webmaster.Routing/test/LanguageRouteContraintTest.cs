@@ -1,11 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿// Copyright (c) 2014-2020 Sarin Na Wangkanai, All Rights Reserved.
+// The Apache v2. See License.txt in the project root for license information.
+
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.AspNetCore.Routing.Constraints;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Wangkanai.Webmaster.Routing;
 using Xunit;
 
 namespace Wangkanai.Webmaster.Routing.Tests
@@ -82,7 +81,7 @@ namespace Wangkanai.Webmaster.Routing.Tests
         }
 
         [Theory]
-        [InlineData("မြန်မာ", false)] // some wrong with Burmese 
+        [InlineData("မြန်မာ", false)] // some wrong with Burmese
         [InlineData("กรุงเทพ", false)]
         [InlineData("bangkok", false)]
         [InlineData("Bangkok1", false)]

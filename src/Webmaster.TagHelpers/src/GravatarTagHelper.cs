@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http.Extensions;
-using Microsoft.AspNetCore.Mvc.TagHelpers;
+﻿// Copyright (c) 2014-2020 Sarin Na Wangkanai, All Rights Reserved.
+// The Apache v2. See License.txt in the project root for license information.
+
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -26,10 +28,13 @@ namespace Wangkanai.Webmaster.TagHelpers
         [HtmlAttributeName(EmailAttributeName)]
         [EmailAddress]
         public string Email { get; set; }
+
         [HtmlAttributeName(SizeAttributeName)]
         public int Size { get; set; }
+
         [HtmlAttributeName(RatingAttributeName)]
         public Rating Rating { get; set; } = Rating.g;
+
         [HtmlAttributeName(ModeAttributeName)]
         public Mode Mode { get; set; } = Mode.Default;
 
@@ -87,18 +92,25 @@ namespace Wangkanai.Webmaster.TagHelpers
     {
         [Display(Name = "404")]
         NotFound,
+
         [Display(Name = "Mp")]
         Mp,
+
         [Display(Name = "Identicon")]
         Identicon,
+
         [Display(Name = "Monsterid")]
         Monsterid,
+
         [Display(Name = "Wavatar")]
         Wavatar,
+
         [Display(Name = "Retro")]
         Retro,
+
         [Display(Name = "Blank")]
         Blank,
+
         [System.ComponentModel.Browsable(false)]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         Default
