@@ -3,9 +3,9 @@
 
 namespace System
 {
-    public class AddWebmasterArgumentNullException : ArgumentNullException
+    public class AddWebmasterCoreArgumentNullException : ArgumentNullException
     {
-        public AddWebmasterArgumentNullException(string paramName)
+        public AddWebmasterCoreArgumentNullException(string paramName)
             : base(paramName) { }
     }
 }
