@@ -8,11 +8,9 @@
     <PackageProjectUrl>https://github.com/wangkanai/Webmaster</PackageProjectUrl>
     <RepositoryUrl>https://github.com/wangkanai/Webmaster.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageLicenseFile></PackageLicenseFile>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageIconUrl>http://0.gravatar.com/avatar/f58457d38ab3bc43526c6e52af17494e</PackageIconUrl>
     <Authors>Sarin Na Wangkanai</Authors>
-
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
 
