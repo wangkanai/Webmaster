@@ -3,4 +3,4 @@ dotnet --version
 dotnet restore
 dotnet build
 dotnet test
-dotnet pack ./src/Webmaster/src/Webmaster.csproj -c Release -o .\artifacts
+dotnet pack ./src/Webmaster/src/Wangkanai.Webmaster.csproj -c Release -o .\artifacts
