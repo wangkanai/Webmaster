@@ -13,8 +13,12 @@
   </ItemGroup>
 
   <ItemGroup>
+
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Webmaster.Core\src\Wangkanai.Webmaster.Core.csproj" />
     <ProjectReference Include="..\..\Webmaster.Razor\src\Wangkanai.Webmaster.Razor.csproj" />
   </ItemGroup>
-  
+
 </Project>

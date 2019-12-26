@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace Wangkanai.Webmaster
 {
+    //[Experimental()]
+    //[Deprecated()]
+    //[Obsolete()]
     public class WebmasterMiddleware
     {
         private readonly RequestDelegate _next;
