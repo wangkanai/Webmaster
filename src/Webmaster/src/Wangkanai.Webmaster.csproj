@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <Version>0.0.2</Version>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
     <Copyright>Sarin Na Wangkanai</Copyright>
     <PackageProjectUrl>https://github.com/wangkanai/Webmaster</PackageProjectUrl>
     <RepositoryUrl>https://github.com/wangkanai/Webmaster.git</RepositoryUrl>
@@ -18,15 +18,24 @@
 
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
-  
+
   <ItemGroup>
-    <ProjectReference Include="..\..\Webmaster.Core\src\Wangkanai.Webmaster.Core.csproj" />
-    <ProjectReference Include="..\..\Webmaster.Routing\src\Wangkanai.Webmaster.Routing.csproj" />
-    <ProjectReference Include="..\..\Webmaster.TagHelpers\src\Wangkanai.Webmaster.TagHelpers.csproj" />
+    <ProjectReference Include="..\..\Webmaster.Core\src\Wangkanai.Webmaster.Core.csproj">
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>All</IncludeAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Webmaster.Routing\src\Wangkanai.Webmaster.Routing.csproj">
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>All</IncludeAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Webmaster.TagHelpers\src\Wangkanai.Webmaster.TagHelpers.csproj">
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>All</IncludeAssets>
+    </ProjectReference>
   </ItemGroup>
 
   <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
