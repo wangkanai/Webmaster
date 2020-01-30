@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using Wangkanai.Responsive;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Wangkanai.Webmaster.Core.Builders
 {
@@ -16,7 +14,7 @@ namespace Wangkanai.Webmaster.Core.Builders
             if (app == null)
                 throw new UseWebmasterArgumentNullException(nameof(app));
 
-            app.UseResponsive();
+            app.UseDetection();
 
             return app.UseMiddleware<WebmasterMiddleware>();
         }
