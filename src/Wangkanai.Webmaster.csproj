@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <Version>0.0.3</Version>
+    
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>Sarin Na Wangkanai</Copyright>
+    <PackageProjectUrl>https://github.com/wangkanai/Webmaster</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/wangkanai/Webmaster.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageIconUrl>http://0.gravatar.com/avatar/f58457d38ab3bc43526c6e52af17494e</PackageIconUrl>
+    <Authors>Sarin Na Wangkanai</Authors>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Wangkanai.Detection" Version="3.0.0-alpha05" />
+  </ItemGroup>
+  
+</Project>

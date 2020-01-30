@@ -3,14 +3,10 @@
 
 using Xunit;
 
-namespace Wangkanai.Webmaster.Tests
+namespace Wangkanai.Webmaster
 {
     public class WebmasterCollectionExtensionTests
     {
-        [Fact]
-        public void Hello()
-        {
-            Assert.True(true);
-        }
+
     }
 }

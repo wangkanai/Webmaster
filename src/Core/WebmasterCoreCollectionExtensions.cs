@@ -13,7 +13,7 @@ namespace Microsoft.Extensions.DependencyInjection
             if (services == null)
                 throw new AddWebmasterCoreArgumentNullException(nameof(services));
 
-            services.AddResponsive();
+            services.AddDetection();
 
             return new WebmasterCoreBuilder(services);
         }
