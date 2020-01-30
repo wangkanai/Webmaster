@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Routing.Constraints;
 using Moq;
 using Xunit;
 
-namespace Wangkanai.Webmaster.Routing.Tests
+namespace Wangkanai.Webmaster.Routing
 {
     public class LanguageRouteContraintTests
     {
