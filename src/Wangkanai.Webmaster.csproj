@@ -5,7 +5,7 @@
     
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>Sarin Na Wangkanai</Copyright>
