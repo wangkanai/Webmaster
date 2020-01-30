@@ -3,4 +3,4 @@ dotnet --version
 dotnet restore
 dotnet build -Channel Release
 dotnet test
-dotnet pack ./src/Webmaster/src/Wangkanai.Webmaster.csproj -Channel Release -o .\artifacts
+dotnet pack -Channel Release -o .\artifacts
