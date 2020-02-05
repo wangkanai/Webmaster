@@ -1,4 +1,4 @@
-﻿namespace Wangkanai.Webmaster.Services
+﻿﻿namespace Wangkanai.Webmaster.Services
 {
     public class WebmasterService : IWebmasterService
     {

@@ -29,7 +29,8 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <returns>An <see cref="IServiceCollection" /> so that additional calls can be chained.</returns>
         public static IWebmasterBuilder AddWebmaster(this IServiceCollection services)
             => services.AddWebmasterBuilder()
-                       .AddCoreServices();
+                       .AddCoreServices()
+                       .AddMarkerService();
 
         internal static IWebmasterBuilder AddWebmasterBuilder(this IServiceCollection services)
             => new WebmasterBuilder(services);
