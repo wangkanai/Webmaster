@@ -6,16 +6,24 @@ using System;
 
 namespace Wangkanai.Webmaster.Builders
 {
+    /// <summary>
+    /// Helper functions for configuring Webmaster services.
+    /// </summary>
     public class WebmasterBuilder : IWebmasterBuilder
     {
-        public WebmasterBuilder(IServiceCollection services)
-        {
-            if (services == null)
-                throw new ArgumentNullException(nameof(services));
+        /// <summary>
+        /// Creates a new instance of <see cref="WebmasterBuilder"/>.
+        /// </summary>
+        /// <param name="services">The <see cref="IServiceCollection" /> to attach to.</param>
+        public WebmasterBuilder(IServiceCollection services) 
+            => Services = services ?? throw new ArgumentNullException(nameof(services));
 
-            Services = services;
-        }
-
+        /// <summary>
+        /// Gets the <see cref="IServiceCollection" /> services are attached to.
+        /// </summary>
+        /// <value>
+        /// The <see cref="IServiceCollection" /> services are attached to.
+        /// </value>
         public IServiceCollection Services { get; private set; }
     }
 }

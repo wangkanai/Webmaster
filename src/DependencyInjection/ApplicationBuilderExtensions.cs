@@ -14,9 +14,16 @@ namespace Wangkanai.Webmaster.Core.Builders
             if (app == null)
                 throw new UseWebmasterArgumentNullException(nameof(app));
 
+            app.Validate();
+            
             app.UseDetection();
 
             return app.UseMiddleware<WebmasterMiddleware>();
+        }
+
+        private static void Validate(this IApplicationBuilder app)
+        {
+            // What should I validate?
         }
     }
 }
