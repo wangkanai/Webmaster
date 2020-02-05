@@ -1,6 +1,6 @@
 # ASP.NET Core Webmaster
 
-ASP.NET Core Search Engine Optimization for Webmaster and written and maintained by Sarin Na Wangkanai.
+ASP.NET Core Search Engine Optimization for Webmaster.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/ky098m8giba3fp4a?svg=true)](https://ci.appveyor.com/project/wangkanai/webmaster)
 [![GitHub](https://img.shields.io/github/license/wangkanai/webmaster)](https://github.com/wangkanai/webmaster/blob/master/LICENSE)
