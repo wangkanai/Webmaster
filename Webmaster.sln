@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29123.89
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{479D9FCD-D57B-48CC-9D19-23707BC4152A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A48E1BFA-9178-4B52-9AE1-F5D37A2425B3}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
@@ -16,13 +14,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Search.MvcApp", "sample\Search.MvcApp\Search.MvcApp.csproj", "{90857AE4-7790-47EC-9F35-A0040239991B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Search.RazorPagesApp", "sample\Search.RazorPagesApp\Search.RazorPagesApp.csproj", "{3BE398FE-3807-4E10-A23E-BF9DE645E7BC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wangkanai.Webmaster", "src\Wangkanai.Webmaster.csproj", "{34EA98C7-3954-40E6-9483-5D888E7B6E7C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wangkanai.Webmaster.Tests", "test\Wangkanai.Webmaster.Tests.csproj", "{F89EAB3F-03B0-46CF-A748-48B8E1090300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "sample\WebApp.csproj", "{2BD72047-9498-45F1-8D89-2BB4109D1C16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{94EF7C28-1EFD-4F77-A649-63840F086A4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,14 +28,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{90857AE4-7790-47EC-9F35-A0040239991B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90857AE4-7790-47EC-9F35-A0040239991B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90857AE4-7790-47EC-9F35-A0040239991B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90857AE4-7790-47EC-9F35-A0040239991B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3BE398FE-3807-4E10-A23E-BF9DE645E7BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3BE398FE-3807-4E10-A23E-BF9DE645E7BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3BE398FE-3807-4E10-A23E-BF9DE645E7BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3BE398FE-3807-4E10-A23E-BF9DE645E7BC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{34EA98C7-3954-40E6-9483-5D888E7B6E7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{34EA98C7-3954-40E6-9483-5D888E7B6E7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34EA98C7-3954-40E6-9483-5D888E7B6E7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -46,13 +36,16 @@ Global
 		{F89EAB3F-03B0-46CF-A748-48B8E1090300}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F89EAB3F-03B0-46CF-A748-48B8E1090300}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F89EAB3F-03B0-46CF-A748-48B8E1090300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BD72047-9498-45F1-8D89-2BB4109D1C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD72047-9498-45F1-8D89-2BB4109D1C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD72047-9498-45F1-8D89-2BB4109D1C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD72047-9498-45F1-8D89-2BB4109D1C16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{90857AE4-7790-47EC-9F35-A0040239991B} = {479D9FCD-D57B-48CC-9D19-23707BC4152A}
-		{3BE398FE-3807-4E10-A23E-BF9DE645E7BC} = {479D9FCD-D57B-48CC-9D19-23707BC4152A}
+		{2BD72047-9498-45F1-8D89-2BB4109D1C16} = {94EF7C28-1EFD-4F77-A649-63840F086A4E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B675781-22E5-4F07-9CC9-D2CE0AD901F1}
