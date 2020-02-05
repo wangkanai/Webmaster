@@ -1,6 +1,6 @@
 #./dotnet-install.ps1 -Channel Current -version 3.0.100
 dotnet --version
 dotnet restore
-dotnet build -Channel Release
+dotnet build -c Release
 dotnet test
-dotnet pack -Channel Release -o .\artifacts
+dotnet pack -c Release -o .\artifacts
