@@ -12,7 +12,7 @@ namespace Wangkanai.Webmaster.Core
 
         public MetaDescriptionAttribute(string description)
         {
-            this._description = description;
+            _description = description;
         }
     }
 }
