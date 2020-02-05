@@ -1,16 +1,18 @@
 ﻿// Copyright (c) 2014-2020 Sarin Na Wangkanai, All Rights Reserved.
 // The Apache v2. See License.txt in the project root for license information.
 
+using System;
 using Microsoft.AspNetCore.Routing;
 using Wangkanai.Webmaster.Routing;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
-    public static class WebmasterRoutingCollectionExtensions
+    public static class RoutingCollectionExtensions
     {
         public static IWebmasterBuilder AddRoutingContraint(this IWebmasterBuilder builder)
         {
-            if (builder == null) throw new AddRoutingArgumentNullException(nameof(builder));
+            if (builder == null) 
+                throw new ArgumentNullException(nameof(builder));
 
             builder.Services.Configure<RouteOptions>(options =>
             {

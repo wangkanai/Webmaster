@@ -13,15 +13,13 @@ namespace Wangkanai.Webmaster
 
         public WebmasterMiddleware(RequestDelegate next)
         {
-            if (next == null)
-                throw new WebmasterMiddlewareNextArgumentNullException(nameof(next));
-
-            _next = next;
+            _next = next ?? throw new ArgumentNullException(nameof(next));
         }
 
-        public async Task Invoke(HttpContext context) {
+        public async Task Invoke(HttpContext context)
+        {
             if (context == null)
-                throw new WebmasterMiddlewareInvokeContextArgumentNullException(nameof(context));
+                throw new ArgumentNullException(nameof(context));
 
             await _next(context).ConfigureAwait(false);
         }
