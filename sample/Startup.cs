@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Wangkanai.Webmaster.Core.Builders;
 
 namespace WebApp
 {
@@ -23,6 +24,8 @@ namespace WebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddWebmaster();
+            
             services.AddControllersWithViews();
         }
 
@@ -46,6 +49,8 @@ namespace WebApp
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseWebmaster();
 
             app.UseEndpoints(endpoints =>
             {
