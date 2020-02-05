@@ -11,8 +11,8 @@ namespace Wangkanai.Webmaster.Core.Builders
     {
         public static IApplicationBuilder UseWebmaster(this IApplicationBuilder app)
         {
-            if (app == null)
-                throw new UseWebmasterArgumentNullException(nameof(app));
+            if (app is null)
+                throw new ArgumentNullException(nameof(app));
 
             app.Validate();
             

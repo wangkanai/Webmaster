@@ -19,9 +19,9 @@ namespace Wangkanai.Webmaster.TagHelpers
     [HtmlTargetElement(ImgAttributeName, Attributes = InlineAttributeName, TagStructure = TagStructure.WithoutEndTag)]
     public class ImageInlineTagHelper : UrlResolutionTagHelper
     {
-        private const string ImgAttributeName = "img";
+        private const string ImgAttributeName    = "img";
         private const string InlineAttributeName = "inline";
-        private const string SrcAttributeName = "src";
+        private const string SrcAttributeName    = "src";
 
         public override int Order => -1000;
 
@@ -31,7 +31,7 @@ namespace Wangkanai.Webmaster.TagHelpers
         internal IFileVersionProvider FileVersionProvider { get; private set; }
 
         public ImageInlineTagHelper(
-            HtmlEncoder htmlEncoder,
+            HtmlEncoder       htmlEncoder,
             IUrlHelperFactory urlHelperFactory)
             : base(urlHelperFactory, htmlEncoder)
         {
@@ -71,30 +71,27 @@ namespace Wangkanai.Webmaster.TagHelpers
 
         private HtmlString InlineImage(IHtmlHelper html, string path, object attributes = null)
         {
-            if (html == null)
+            if (html is null)
                 throw new ArgumentNullException(nameof(html));
 
             var contentType = GetFileContentType(path);
 
             var env = html.ViewContext.HttpContext.RequestServices.GetService(typeof(IHostEnvironment)) as IHostEnvironment;
 
-            using (var stream = env.ContentRootFileProvider.GetFileInfo(path).CreateReadStream())
-            {
-                var array = new byte[stream.Length];
-                stream.Read(array, 0, array.Length);
-                var base64 = ConvertToBase64(array);
+            using var stream = env.ContentRootFileProvider.GetFileInfo(path).CreateReadStream();
+            
+            var array = new byte[stream.Length];
+            stream.Read(array, 0, array.Length);
+            var base64 = ConvertToBase64(array);
 
-                var props = (attributes != null)
-                    ? attributes.GetType().GetProperties().ToDictionary(x => x.Name, x => x.GetValue(attributes))
-                    : null;
-                var attrs = (props == null)
-                    ? string.Empty
-                    : string.Join(" ", props.Select(x => string.Format("{0}=\"{1}\"", x.Key, x.Value)));
+            var props = attributes?.GetType().GetProperties().ToDictionary(x => x.Name, x => x.GetValue(attributes));
+            var attrs = props == null
+                            ? string.Empty
+                            : string.Join(" ", props.Select(x => $"{x.Key}=\"{x.Value}\""));
 
-                var img = $"<img src=\"data:{contentType};base64,{base64}\" {attrs}";
+            var img = $"<img src=\"data:{contentType};base64,{base64}\" {attrs}";
 
-                return new HtmlString(img);
-            }
+            return new HtmlString(img);
         }
     }
 }
