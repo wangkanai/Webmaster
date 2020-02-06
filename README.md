@@ -6,7 +6,7 @@ ASP.NET Core Search Engine Optimization for Webmaster lets you improve the art, 
 [![GitHub](https://img.shields.io/github/license/wangkanai/webmaster)](https://github.com/wangkanai/webmaster/blob/master/LICENSE)
 [![Open Collective](https://img.shields.io/badge/open%20collective-support%20me-3385FF.svg)](https://opencollective.com/wangkanai)
 [![Patreon](https://img.shields.io/badge/patreon-support%20me-d9643a.svg)](https://www.patreon.com/wangkanai)
- 
+
 [![NuGet Badge](https://buildstats.info/nuget/wangkanai.Webmaster)](https://www.nuget.org/packages/wangkanai.Webmaster)
 [![NuGet Badge](https://buildstats.info/nuget/wangkanai.Webmaster?includePreReleases=true)](https://www.nuget.org/packages/wangkanai.Webmaster)
 [![MyGet Badge](https://buildstats.info/myget/wangkanai/Wangkanai.Webmaster)](https://www.myget.org/feed/wangkanai/package/nuget/Wangkanai.Webmaster)
@@ -15,13 +15,13 @@ ASP.NET Core Search Engine Optimization for Webmaster lets you improve the art, 
 
 ### Installation
 
-Installation of Wangkanai.Webmaster
+Installation of Wangkanai Webmaster
 
 ```powershell
 PM> install-package Wangkanai.Webmaster
 ```
 
-Implement of the library into your web application is done by configuring the `startup.cs` by adding the Webmaster service in the `ConfigureServices` method.
+Implementation of the library into your web application is done by configuring the `startup.cs` by adding the Webmaster service in the `ConfigureServices` method.
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -47,6 +47,7 @@ public void Configure(IApplicationBuilder app)
 
 - `src` - The code of this project lives here
 - `test` - The unit test of this project lives here
+- `sample` - The sample web app of this project lives here
 
 ### Contributing
 
