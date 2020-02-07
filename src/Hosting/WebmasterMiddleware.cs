@@ -16,7 +16,7 @@ namespace Wangkanai.Webmaster
             _next = next ?? throw new ArgumentNullException(nameof(next));
         }
 
-        public async Task Invoke(HttpContext context)
+        public async Task InvokeAsync(HttpContext context)
         {
             if (context == null)
                 throw new ArgumentNullException(nameof(context));
