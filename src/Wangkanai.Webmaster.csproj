@@ -11,9 +11,9 @@
         <Description>ASP.NET Core Search Engine Optimization for Webmaster lets you improve the art, craft, and science of driving web traffic to enabling you with easy and efficiency native tool build in the asp.net core library.</Description>
         <Copyright>Copyright © 2020 Sarin Na Wangkanai</Copyright>
         <PackageTags>aspnetcore;webmaster;seo;search;optimization;taghelper</PackageTags>
-        <PackageProjectUrl>https://github.com/wangkanai/Webmaster</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/wangkanai/webmaster</PackageProjectUrl>
         <RepositoryType>git</RepositoryType>
-        <RepositoryUrl>https://github.com/wangkanai/Webmaster.git</RepositoryUrl>
+        <RepositoryUrl>https://github.com/wangkanai/webmaster.git</RepositoryUrl>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <PackageIconUrl>https://raw.githubusercontent.com/wangkanai/webmaster/dev/asset/webmaster-logo.png</PackageIconUrl>
     </PropertyGroup>
