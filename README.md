@@ -2,6 +2,8 @@
 
 ASP.NET Core Search Engine Optimization for Webmaster lets you improve the art, craft, and science of driving web traffic to enabling you with easy and efficiency native tool build in the asp.net core library.
 
+**Please give some love by clicking on the star!** :star::star::star: This help movtivate me to continue on developing the project.
+
 [![Build status](https://ci.appveyor.com/api/projects/status/ky098m8giba3fp4a?svg=true)](https://ci.appveyor.com/project/wangkanai/webmaster)
 [![GitHub](https://img.shields.io/github/license/wangkanai/webmaster)](https://github.com/wangkanai/webmaster/blob/master/LICENSE)
 [![Open Collective](https://img.shields.io/badge/open%20collective-support%20me-3385FF.svg)](https://opencollective.com/wangkanai)
