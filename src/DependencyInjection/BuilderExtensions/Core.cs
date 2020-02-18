@@ -12,8 +12,8 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static IWebmasterBuilder AddCoreServices(this IWebmasterBuilder builder)
         {
-            builder.Services.AddDetection();
-
+            builder.Services.TryAddSingleton<IWebmasterService, WebmasterService>();
+            
             return builder;
         }
 
