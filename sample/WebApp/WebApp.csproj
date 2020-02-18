@@ -6,12 +6,11 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.0.96" />
+      <PackageReference Include="Wangkanai.Detection" Version="3.0.0-alpha09" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\..\src\Wangkanai.Webmaster.csproj" />
     </ItemGroup>
-
-
-
+    
 </Project>

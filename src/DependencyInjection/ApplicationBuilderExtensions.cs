@@ -15,8 +15,6 @@ namespace Wangkanai.Webmaster.Core.Builders
                 throw new ArgumentNullException(nameof(app));
 
             app.Validate();
-            
-            app.UseDetection();
 
             return app.UseMiddleware<WebmasterMiddleware>();
         }
