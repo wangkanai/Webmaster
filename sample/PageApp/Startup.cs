@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Wangkanai.Webmaster.Core.Builders;
 
 namespace PageApp
 {
@@ -23,6 +24,11 @@ namespace PageApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDetection();
+            
+            services.AddWebmaster()
+                    .AddRoutingContraint();
+            
             services.AddRazorPages();
         }
 
@@ -43,6 +49,8 @@ namespace PageApp
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseDetection();
+            app.UseWebmaster();
             app.UseRouting();
 
             app.UseAuthorization();
