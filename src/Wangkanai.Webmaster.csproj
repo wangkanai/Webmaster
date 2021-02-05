@@ -1,11 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <VersionPrefix>0.0</VersionPrefix>
+        <VersionPrefix>0.0.107</VersionPrefix>
         <TargetFramework>net5.0</TargetFramework>
-
-        <LangVersion>default</LangVersion>
-        <Nullable>enable</Nullable>
         <NoWarn>NU5048;NU5104</NoWarn>
     </PropertyGroup>
     
