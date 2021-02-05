@@ -16,7 +16,7 @@
     <PropertyGroup>
         <Product>Wangkanai Webmaster</Product>
         <Authors>Sarin Na Wangkanai</Authors>
-        <Copyright>©2016-2020 Sarin Na Wangkanai, All rights reserved</Copyright>
+        <Copyright>©2016-2021 Sarin Na Wangkanai, All rights reserved</Copyright>
         
         <Description>ASP.NET Core Search Engine Optimization for Webmaster lets you improve the art, craft, and science of driving web traffic to enabling you with easy and efficiency native tool build in the asp.net core library.</Description>
         
