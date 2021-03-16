@@ -15,10 +15,6 @@ namespace Wangkanai.Webmaster.TagHelpers
         private const string HrefAttributeName = "href";
         private const string RelAttributeName = "rel";
 
-        public CanonicalTagHelper()
-        {
-        }
-
         public override int Order => -1000;
 
         [HtmlAttributeNotBound]
@@ -48,8 +44,4 @@ namespace Wangkanai.Webmaster.TagHelpers
             output.Attributes.Add(HrefAttributeName, Site + Path);
         }
     }
-
-    public class MetaKeywordTagHelper : TagHelper { }
-
-    public class MetaDescriptionTagHelper : TagHelper { }
 }

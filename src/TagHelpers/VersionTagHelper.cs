@@ -19,11 +19,17 @@ namespace Wangkanai.Webmaster.TagHelpers
                 throw new ArgumentNullException(nameof(context));
             if (output is null)
                 throw new ArgumentNullException(nameof(output));
-
+            
+            var version = Assembly.GetEntryAssembly()?.GetName().Version;
+            if (version is null)
+            {
+                output.SuppressOutput();
+                return;
+            }
+            
             output.TagName = "span";
             output.TagMode = TagMode.StartTagAndEndTag;
-            var version = Assembly.GetEntryAssembly()?.GetName().Version.ToString(FieldCount);
-            output.Content.Append(version);
+            output.Content.Append(version.ToString(FieldCount));
         }
     }
 }
