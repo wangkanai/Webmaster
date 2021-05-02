@@ -1,33 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <VersionPrefix>0.0.107</VersionPrefix>
-        <TargetFramework>net5.0</TargetFramework>
-        <NoWarn>NU5048;NU5104</NoWarn>
-    </PropertyGroup>
-    
-    <PropertyGroup>
-        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    </PropertyGroup>
-    
-    <PropertyGroup>
-        <Product>Wangkanai Webmaster</Product>
-        <Authors>Sarin Na Wangkanai</Authors>
-        <Copyright>©2016-2021 Sarin Na Wangkanai, All rights reserved</Copyright>
-        
-        <Description>ASP.NET Core Search Engine Optimization for Webmaster lets you improve the art, craft, and science of driving web traffic to enabling you with easy and efficiency native tool build in the asp.net core library.</Description>
-        
-        <PackageTags>aspnetcore;webmaster;seo;search;optimization;taghelper</PackageTags>
-        <PackageProjectUrl>https://github.com/wangkanai/webmaster</PackageProjectUrl>
-        <PackageIconUrl>https://raw.githubusercontent.com/wangkanai/webmaster/main/asset/webmaster-logo.png</PackageIconUrl>
-        <PackageLicenseUrl>https://github.com/wangkanai/Webmaster/blob/main/LICENSE</PackageLicenseUrl>
-        
-        <RepositoryType>git</RepositoryType>
-        <RepositoryUrl>https://github.com/wangkanai/webmaster.git</RepositoryUrl>
+      <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Wangkanai.Runtime" Version="0.4.0" />
     </ItemGroup>
 
 </Project>
