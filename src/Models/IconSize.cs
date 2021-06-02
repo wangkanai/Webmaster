@@ -10,4 +10,9 @@
         X256 = 256,
         X512 = 512
     }
+    
+    public static class IconSizeExtensions{
+        public static int ToInt(this IconSize size) 
+            => (int) size;
+    }
 }

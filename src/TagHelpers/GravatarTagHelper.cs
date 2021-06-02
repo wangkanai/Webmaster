@@ -5,11 +5,9 @@ using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using System;
 using System.ComponentModel.DataAnnotations;
-using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
-
 using Wangkanai.Cryptography;
+using Wangkanai.Webmaster.Models;
 
 namespace Wangkanai.Webmaster.TagHelpers
 {
@@ -32,7 +30,7 @@ namespace Wangkanai.Webmaster.TagHelpers
         public string Email { get; set; }
 
         [HtmlAttributeName(SizeAttributeName)]
-        public int Size { get; set; }
+        public IconSize Size { get; set; }
 
         [HtmlAttributeName(RatingAttributeName)]
         public Rating Rating { get; set; } = Rating.g;
@@ -42,17 +40,15 @@ namespace Wangkanai.Webmaster.TagHelpers
 
         public override Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
-            if (context == null)
-                throw new ArgumentNullException(nameof(context));
-            if (output == null)
-                throw new ArgumentNullException(nameof(output));
-
+            Check.NotNull(context, nameof(context));
+            Check.NotNull(output, nameof(output));
+            
             output.TagName = "img";
             var hash  = Email.HashMd5();
             var uri   = $"https://www.gravatar.com/avatar/{hash}";
             var query = new QueryBuilder();
             if (Size > 0)
-                query.Add("s", Size.ToString());
+                query.Add("s", Size.ToInt().ToString());
             if (Rating != Rating.g)
                 query.Add("r", Rating.ToString());
             if (Mode != Mode.Default)
