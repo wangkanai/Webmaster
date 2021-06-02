@@ -8,10 +8,15 @@ using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.Extensions.Hosting;
+
 using System;
+using System.IO;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+
+using Microsoft.Extensions.FileProviders;
+
 using Wangkanai.Webmaster.Razor.TagHelpers;
 
 namespace Wangkanai.Webmaster.TagHelpers
@@ -39,10 +44,8 @@ namespace Wangkanai.Webmaster.TagHelpers
 
         public override Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
-            if (context == null)
-                throw new ArgumentNullException(nameof(context));
-            if (output == null)
-                throw new ArgumentNullException(nameof(output));
+            Check.NotNull(context, nameof(context));
+            Check.NotNull(output, nameof(output));
 
             output.CopyHtmlAttribute(SrcAttributeName, context);
 
@@ -67,19 +70,30 @@ namespace Wangkanai.Webmaster.TagHelpers
             throw new ArgumentException("Unknown file type");
         }
 
-        private string ConvertToBase64(byte[] array) => Convert.ToBase64String(array);
+        private string GetFileContentType(FileInfo info)
+            => info.Extension switch
+               {
+                   "jpg" => "image/jpeg",
+                   "gif" => "image/gif",
+                   "png" => "image/png",
+                   "svg" => "image/svg+xml",
+                   _ => throw new ArgumentNullException("Unknown file type"),
+               };
+
+
+        private string ConvertToBase64(byte[] array)
+            => Convert.ToBase64String(array);
 
         private HtmlString InlineImage(IHtmlHelper html, string path, object attributes = null)
         {
-            if (html is null)
-                throw new ArgumentNullException(nameof(html));
-
+            Check.NotNull(html, nameof(html));
+            
+            var env         = html.ViewContext.HttpContext.RequestServices.GetService(typeof(IHostEnvironment)) as IHostEnvironment;
+            var fileinfo    = env.ContentRootFileProvider.GetFileInfo(path);
             var contentType = GetFileContentType(path);
 
-            var env = html.ViewContext.HttpContext.RequestServices.GetService(typeof(IHostEnvironment)) as IHostEnvironment;
+            using var stream = fileinfo.CreateReadStream();
 
-            using var stream = env.ContentRootFileProvider.GetFileInfo(path).CreateReadStream();
-            
             var array = new byte[stream.Length];
             stream.Read(array, 0, array.Length);
             var base64 = ConvertToBase64(array);
