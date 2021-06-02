@@ -9,6 +9,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
+using Wangkanai.Cryptography;
+
 namespace Wangkanai.Webmaster.TagHelpers
 {
     [HtmlTargetElement(GravatarAttributeName, Attributes = EmailAttributeName, TagStructure = TagStructure.WithoutEndTag)]
@@ -46,8 +48,8 @@ namespace Wangkanai.Webmaster.TagHelpers
                 throw new ArgumentNullException(nameof(output));
 
             output.TagName = "img";
-            var hash = HashEmail(Email);
-            var uri = $"https://www.gravatar.com/avatar/{hash}";
+            var hash  = Email.HashMd5();
+            var uri   = $"https://www.gravatar.com/avatar/{hash}";
             var query = new QueryBuilder();
             if (Size > 0)
                 query.Add("s", Size.ToString());
@@ -60,16 +62,6 @@ namespace Wangkanai.Webmaster.TagHelpers
             output.Attributes.Add(src);
 
             return base.ProcessAsync(context, output);
-        }
-
-        private string HashEmail(string email)
-        {
-            using var md5 = MD5.Create();
-            byte[] data = md5.ComputeHash(Encoding.ASCII.GetBytes(email));
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < data.Length; i++)
-                sb.Append(data[i].ToString("x2"));
-            return sb.ToString();
         }
 
         private string GetMode(Mode mode)
