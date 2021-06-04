@@ -14,7 +14,7 @@ using Microsoft.Extensions.FileProviders;
 
 namespace Wangkanai.Webmaster.TagHelpers
 {
-    [HtmlTargetElement(InlineImgAttributeName, Attributes = "[src^='~/']", TagStructure = TagStructure.WithoutEndTag)]
+    [HtmlTargetElement("inline-img", Attributes = "[src^='~/']", TagStructure = TagStructure.WithoutEndTag)]
     public class InlineImgTagHelper : UrlResolutionTagHelper
     {
         private const string InlineImgAttributeName = "inline-img";
@@ -55,7 +55,7 @@ namespace Wangkanai.Webmaster.TagHelpers
 
         private async Task<string> GetFileContentBase64Async()
         {
-            await using var stream  = GetFileInfo.CreateReadStream();
+            await using var stream = GetFileInfo.CreateReadStream();
             await using var writer = new MemoryStream();
 
             await stream.CopyToAsync(writer);
@@ -65,7 +65,7 @@ namespace Wangkanai.Webmaster.TagHelpers
         }
 
         private IFileInfo GetFileInfo => _fileProvider.GetFileInfo(Src);
-        
+
         private string GetFileContentType(string path)
         {
             if (path.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase))
