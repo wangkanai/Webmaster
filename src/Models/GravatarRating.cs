@@ -7,4 +7,10 @@
         r,
         x
     }
+    
+    public static class GravatarRatingExtensions
+    {
+        public static string Value(this GravatarRating rating) 
+            => rating.ToString().ToLower();
+    }
 }

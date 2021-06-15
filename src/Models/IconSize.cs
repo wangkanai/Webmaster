@@ -1,4 +1,6 @@
-﻿namespace Wangkanai.Webmaster.Models
+﻿using System.Drawing;
+
+namespace Wangkanai.Webmaster.Models
 {
     public enum IconSize
     {
@@ -14,5 +16,8 @@
     public static class IconSizeExtensions{
         public static int ToInt(this IconSize size) 
             => (int) size;
+
+        public static string Value(this IconSize size)
+            => size.ToInt().ToString();
     }
 }

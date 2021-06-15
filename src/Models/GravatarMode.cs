@@ -29,4 +29,14 @@ namespace Wangkanai.Webmaster.Models
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         Default
     }
+
+    public static class GravatarModeExtensions
+    {
+        public static string Value(this GravatarMode mode)
+        {
+            if (mode == GravatarMode.NotFound)
+                return "404";
+            return mode.ToString().ToLower();
+        }
+    }
 }
